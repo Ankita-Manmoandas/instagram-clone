@@ -2,14 +2,14 @@
 import './App.scss';
 import Nav from './components/nav/Nav';
 import Profile from './containers/Profile/Profile';
-import data_file from "./data/images"
+import profile from "./data/images.js"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Nav />
-        <Profile images={data_file}/> 
+        <Profile username={profile.username} images = {profile.posts} /> 
 
       </header>
     </div>

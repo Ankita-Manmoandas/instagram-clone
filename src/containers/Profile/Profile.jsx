@@ -3,22 +3,34 @@ import React from "react";
 import "./Profile.scss";
 
 const Profile = (props) => {
-  const {images} = props
-  const ImageCard = images.map((image,index) => {
+  const {username, profilepic, bio, images} = props
+
+
+  const imageCard = images.map((image,index) => {
     return (
       <div key = {"Image " + index}>
-      <img src= {image.url} className="profile__image"/>
+      <img src= {image} className="profile__image"/>
 
        
       </div>
     )
        
   })
+  const userInfo = username.map((name, index) => {
+    return (
+      <div key = {"Image " + index}>
+      <h2> {name} </h2>
+      </div>
+    )
+  })
+
 
   return (
   <div className="profile" >
+
+{userInfo}
+{imageCard}
     
-    {ImageCard}
   </div>
   )
  
